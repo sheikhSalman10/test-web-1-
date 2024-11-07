@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.header {
+    background-color: #3B8EA5;
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Styling the Menu Bar */
+.menu-bar {   
+     background: linear-gradient(135deg, #004d4d, #003366);
+
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+}
+
+/* Main Nav Menu Styling */
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu-bar ul li {
+    margin-right: 20px;
+}
+
+.menu-bar ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-bar ul li a {
+    color: hsla(170, 23%, 95%, 0.911);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #FF7F50;
+    color: rgb(0, 0, 0);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Icon - Hidden by Default */
+.menu-icon {
+    display: none; /* Initially hidden for larger screens */
+    font-size: 24px;
+    cursor: pointer;
+    color: #000; /* Change this color to suit your design */
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .menu-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-bar ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    max-width: 1200px;
+    padding: 2rem 0;
+}
+
+.content-section {
+    background-color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.content-section:hover {
+    transform: translateY(-5px);
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #003366;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+.footer {
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* New "Why Choose Us" Section Styles */
+.reasons {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.reason {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.reason:hover {
+    transform: translateY(-5px);
+}
+
+.reason h3 {
+    color: #003366;
+}
+
+.reason a {
+    text-decoration: none;
+    color: #3B8EA5;
+    transition: color 0.3s;
+}
+
+.reason a:hover {
+    color: #FF7F50;
+}
+
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+}

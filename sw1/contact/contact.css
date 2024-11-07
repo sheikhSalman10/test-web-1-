@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+.header {
+    background-color: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-bar {
+    background: -webkit-linear-gradient(left, #055a4f, #00c6ff);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Logo Styling */
+.logo img {
+    height: 50px;
+}
+
+/* Main Nav Menu Styling */
+.menu-bar ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.menu-bar ul li {
+    margin-right: 20px;
+}
+
+.menu-bar ul li:last-child {
+    margin-right: 0;
+}
+
+.menu-bar ul li a {
+    color: #f5f6f7;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.menu-bar ul li a:hover {
+    background-color: #FF7F50;
+    color: rgb(2, 2, 2);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Hamburger Icon - Hidden by Default */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #f7f5f5;
+}
+
+/* Responsive Styles for Smaller Screens */
+@media (max-width: 768px) {
+    .menu-bar ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .menu-bar ul.show {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.contact-info p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.contact-section {
+    background-color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-form-container {
+    width: 80%;
+    margin: auto;
+    max-width: 600px;
+}
+
+.contact-form-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form-container p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #0171e0;
+}
+
+textarea {
+    height: 150px;
+}
+
+.submit-btn {
+    padding: 0.75rem 2rem;
+    background-color: #003366;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+}
+
+.submit-btn:hover {
+    background-color: #002244;
+}
+
+.footer {
+    background-color: #003366;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
